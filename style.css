@@ -1,0 +1,795 @@
+/* General Reset */
+body, h1, h2, p, ul, li, a, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* General Reset */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.header {
+    background-color: rgb(12, 134, 248);
+    color:antiquewhite;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* General Header Styling */
+.header {
+    background-color:  rgb(12, 134, 248); /* Light background for the header */
+    padding: 15px 20px; /* Spacing around the header content */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    border-bottom: 2px solid #ccc; /* Optional: Add a bottom border for distinction */
+    position: relative; /* Ensures proper alignment for children */
+}
+
+/* Container for Header Content */
+.header-container {
+    width: 100%;
+    max-width: 1200px; /* Limits the content width for better design */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ensures the text is centered in the header */
+    position: relative;
+}
+
+/* Logo Styling */
+.logo img {
+    width: 50px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    left: 20px; /* Position logo on the left side */
+    top: 50%; /* Align vertically */
+    transform: translateY(-50%); /* Fine-tune vertical alignment */
+}
+
+/* Centered Title Styling */
+.title {
+    text-align: center;
+    flex-grow: 1; /* Allows the title to take up central space */
+}
+
+.title h1 {
+    margin: 0; /* Removes default margin */
+    font-size: 2rem; /* Adjust font size */
+    color: #e6de78; /* Text color */
+    font-family: 'Roboto', sans-serif; /* Professional font */
+    font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap; /* Allows wrapping of elements */
+        text-align: center; /* Aligns text for small screens */
+    }
+
+    .logo img {
+        position: static; /* Removes absolute positioning for smaller screens */
+        margin-bottom: 10px; /* Adds spacing */
+    }
+
+    .title {
+        flex-grow: unset; /* Prevents center stretching on mobile */
+    }
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 20px; /* Spacing between the menu items */
+}
+
+.nav-links li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333; /* Default link color */
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    display: block; /* Make the link a block element for easier click area */
+    transition: all 0.3s ease;
+}
+.nav-links a:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: #ebee27; /* Change background color on hover */
+    border-radius: 5px; /* Optional: Add rounded corners for a smooth look */
+}
+/* Dropdown Menu */
+.nav-links li:hover > .dropdown {
+    display: block; /* Show the dropdown menu when hovering over the parent list item */
+}
+.dropdown {
+    display: none; /* Hide the dropdown by default */
+    position: absolute;
+    top: 100%; /* Position the dropdown directly below the parent list item */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow for depth */
+    z-index: 1000; /* Ensure the dropdown is on top of other content */
+}
+
+.dropdown a {
+    color: #333; /* Dropdown link color */
+    padding: 10px 15px;
+    font-size: 1rem;
+    white-space: nowrap; /* Prevents text from wrapping in the dropdown */
+}
+
+/* Dropdown link hover effect */
+.dropdown a:hover {
+    background-color: #f4f4f4; /* Light background color for hover */
+    color: #4CAF50; /* Change text color on hover */
+}
+
+/* Optional: Add a transition effect for the dropdown menu */
+.dropdown {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth fade-in/out */
+}
+
+.nav-links li:hover > .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-color: #000; /* Fallback background color */
+    overflow: hidden;
+}
+
+.hero video, .hero svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video or SVG covers the entire section */
+    z-index: -1; /* Send the video/SVG to the background */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(247, 205, 67);
+    z-index: 1; /* Overlay content above video/SVG */
+    padding: 0 20px;
+}
+
+/* Header inside the Hero */
+.hero-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+/* Logo Position */
+.hero-header img {
+    max-height: 50px;
+    max-width: 150px;
+}
+
+/* Content in the Hero */
+.hero-content h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* About Section */
+.about {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+}
+
+/* Events Section */
+
+.events {
+    position: relative;
+    width: 100%;
+    padding: 80px 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+.events-container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Background Image with Fixed Parallax Effect */
+.events::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/aw.JPG'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    opacity: 0.6;
+    z-index: 0;
+}
+
+/* Looping Effect for Events */
+.events-loop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loop 25s linear inherit;
+}
+
+.event-item {
+    width: 300px;
+    margin: 0 20px;
+    background-color: rgba(5, 46, 134, 0.7); /* Dark overlay for better text visibility */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(44, 51, 2, 0.76);
+    opacity: 0.9;
+}
+
+.event-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Event Item Text */
+.event-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.event-item p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.event-item a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.event-item a:hover {
+    background-color: #3e8e41;
+}
+
+/* Infinite Loop Animation */
+@keyframes loop {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Responsiveness for Smaller Screens */
+@media (max-width: 768px) {
+    .events-loop {
+        flex-direction: column;
+    }
+    .event-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Donate Section */
+.donate {
+    background-color: #4CAF50;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.donate h2 {
+    font-size: 2.5rem;
+}
+
+.donate a {
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+/* Container for the carousel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+  }
+  
+  .carousel-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .carousel-text {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(27, 78, 248);
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(16, 157, 250, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Animation for image rotation */
+  @keyframes rotateEffect {
+    0% {
+      transform: translate3d(20px);
+    }
+    50% {
+      transform: translate3d(180deg);
+    }
+    100% {
+      transform: translate3d(50%);
+    }
+  }
+  
+  .carousel-images img {
+    animation: alternate-reverse;
+  }
+  
+/* Hero Section Styling */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.hero-content {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        height: 50vh;
+    }
+}
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Carousel Section */
+.carousel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+.carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    animation: slide 9s infinite;
+}
+
+.carousel-item:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.carousel-item:nth-child(3) {
+    animation-delay: 6s;
+}
+
+/* Sliding animation */
+@keyframes slide {
+    0%, 33.333% {
+        opacity: 1;
+        transform: translateX(0);
+        z-index: 1;
+    }
+    40%, 100% {
+        opacity: 0;
+        transform: translateX(-100%);
+        z-index: 0;
+    }
+}
+
+/* Split Section */
+.split {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.image {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .split {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image, .content {
+        flex: none;
+        width: 100%;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background: url('yyy.JPG') center/cover no-repeat;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+}
+
+.hero .btn {
+    background: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+ .sidebar { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.sidebar .section { 
+    background: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+}
+
+.sidebar .section h3 { 
+    font-family: 'Playfair Display', serif; 
+    color: #003366; 
+    margin-bottom: 15px; 
+}
+
+.sidebar .section ul { 
+    list-style: none; 
+}
+
+.sidebar .section ul li { 
+    margin-bottom: 10px; 
+}
+
+.sidebar .section ul li a { 
+    text-decoration: none; 
+    color: #333; 
+    transition: color 0.3s ease; 
+}
+
+.sidebar .section ul li a:hover { 
+    color: #003366; 
+}
+
+ @media (max-width: 768px) { .blog-page { grid-template-columns: 1fr; } }
+
+/* General Styles */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px;
+    background-color: #f4f4f4;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Flexbox Layout for Contact Content */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Left Side - Contact Details */
+.contact-details {
+    flex: 1;
+    background-color: cyan;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details ul {
+    list-style: circle;
+    padding: 0;
+}
+
+.contact-details li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.contact-details li strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Right Side - Google Map */
+.contact-map {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-map iframe {
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-details, .contact-map {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+.about img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: #3366f1;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+.social-links a {
+    color: aquamarine;
+    margin: 0 10px;
+    text-decoration: solid;
+}
+.social-links a:hover {
+    text-decoration: gold;
+}

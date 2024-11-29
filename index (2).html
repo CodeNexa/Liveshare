@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Hampton Church - A place for worship, community, and faith.">
+    <title>Hampton Church</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+
+</head>
+<body>
+    <!-- Header with logo and navigation -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo on the left -->
+            <div class="logo">
+                <img src="images/rrrr.JPG" alt="Worship Service Logo">
+            </div>
+            <!-- Centered text -->
+            <div class="title">
+                <h1>CCI  -  Journey of Hope</h1>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li>
+                    <a href="#">Home</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Ministers</a></li>
+                        <li><a href="#">Discipleship</a></li>
+                        <li><a href="#">Membership</a></li>
+                    </ul>
+                </li>
+               
+                <li>
+                    <a href="#">About</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Mission</a></li>
+                        <li><a href="#">Vision</a></li>
+                        <li><a href="#">CCI Founders</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Fellowship</a></li>
+                        <li><a href="#">Home Churches</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Contact Form</a></li>
+                        <li><a href="#">Location</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </nav>
+    </header>
+   
+    </section>
+    <!-- Hero Section (Image Carousel with text) -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay">
+           
+            <video autoplay loop muted>
+                <source src="images/play3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <div class="hero-content">
+                <h2>CCI - Journey of Hope</h2>
+                <p>Christian Church International has over 600 churches across the globe</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Our church is dedicated to spreading the love of Christ and fostering a strong community. We welcome you to join us in worship and service to others.</p>
+        
+        <div class="carousel">
+            <!-- Service 1 -->
+            <div class="carousel-item" style="background-color: #f4f4f4;">
+                <div class="split">
+                    <div class="image">
+                        <img src="images/qsw.JPG" alt="Worship Service">
+                    </div>
+                    <div class="content">
+                        <h2>Mission</h2>
+                        <p>Our mission is to reach out to the lost souls through</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 2 -->
+            <div class="carousel-item" style="background-color: #eaf7ff;">
+                <div class="split">
+                    <div class="image">
+                        <img src="images/aq.JPG" alt="Bible Study">
+                    </div>
+                    <div class="content">
+                        <h2>Vision</h2>
+                        <p>Reach out to the lost souls </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="carousel-item" style="background-color: #fffbef;">
+                <div class="split">
+                    <div class="image">
+                        <img src="images/wq.JPG" alt="Community Outreach">
+                    </div>
+                    <div class="content">
+                        <h2>CCI Founders</h2>
+                        <p> Archbishop Henry and Reverend Betty Mulandi
+                            - Archibishop Henry Mulandi
+CCI started in 1980 and is now celebrating 
+over 40years of Ministry with Bishop Dr. Henry Mulandi 
+and a few partners in where they ministered in high schools in the 
+country. C.C.I. formerly known as African Christian church of East Africa.
+ Bishop Dr. Henry Mulandi 
+and the team held a camp in Kiambu Institute in August of 1980.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </section>
+
+    <!-- Upcoming Events Section -->
+<section id="events" class="events">
+    <div class="events-container">
+        <div class="events-loop">
+            <!-- Event 1 -->
+            <div class="event-item">
+                <h3>Christmas Eve Service</h3>
+                <p>Join us for a special Christmas Eve service on December 24th. A time of reflection and celebration.</p>
+                <a href="#" class="btn-primary">Learn More</a>
+            </div>
+            <!-- Event 2 -->
+            <div class="event-item">
+                <h3>First Time Visitor</h3>
+                <p>Planning to visit us this Sunday?
+                    Experience an amazing love in our Church and Sister Churches.
+                     Enjoy your family life and let us know of your presence.</p>
+                <a href="#" class="btn-primary">Get Involved</a>
+            </div>
+            <!-- Event 3 -->
+            <div class="event-item">
+                <h3>Archived Sermons</h3>
+                <p>Here's free access to our Sermons
+                    We are here to keep your faith strong by providing you with the Word 
+                    of God to meditate on.
+                     Get your rhema word today!</p>
+                <a href="#" class="btn-primary">Join Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Donation Section -->
+    <section id="donate" class="donate">
+        <div class="container">
+            <h2>Support Our Church</h2>
+            <p>Your generous donations allow us to continue our mission and outreach programs. Thank you for your support!</p>
+            <a href="#" class="btn-primary">Donate Now</a>
+        </div>
+    </section>
+     
+    <script src="scripts.js"></script>
+
+    <aside class="sidebar">
+   
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>If you have any questions, feel free to reach out to us!</p>
+        
+                <div class="contact-content">
+                    <!-- Contact Details (Left Side) -->
+                    <div class="contact-details">
+                        <ul class="contact-info">
+                            <!-- Replace contact details list items with icons -->
+                        <li><i class="fas fa-envelope"></i> info@cci.or.ke</li>
+                        <li><i class="fas fa-phone"></i> Phone: 987 654 3210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Makongeni, Thika. BAT-Kiganjo Road and Garisa Road Junction</li>
+                        <li><a href="https://www.facebook.com/CCITruth/">Facebook</a></li>
+                        <li><a href="https://youtube.com/@ccicot?si=a8H7O_dCJtoaQUnH">Youtube</a></li>
+                        </ul>
+                    </div>
+                    
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15956.568108038193!2d37.10933200000001!3d-1.054957!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4e36a8342b93%3A0xa32742b9d9dd0476!2sChristian%20Church%20International%20-%20Thika!5e0!3m2!1sen!2sus!4v1732881584317!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; Copyright © 2024 Christian Church International - CCI | Powered by Christian Church International - CCI.</p>
+            
+            </div>
+        </footer>
+        <script src="scripts.js"></script>
+</body>
+</html>
